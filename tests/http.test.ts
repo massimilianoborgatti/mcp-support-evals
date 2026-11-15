@@ -47,7 +47,12 @@ it('serves the tools over Streamable HTTP and keeps returns across requests', as
       name,
       arguments: { ...args, reason: 'Duplicate attempt' },
     });
-    expect(retry.structuredContent).toEqual(first.structuredContent);
+    expect(retry.structuredContent).toMatchObject({
+      request_id: 'RET-0001',
+      status: 'pending',
+      reason: 'Damaged pot',
+      already_exists: true,
+    });
   } finally {
     await client.close();
   }

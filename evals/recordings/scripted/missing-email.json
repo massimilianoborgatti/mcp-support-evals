@@ -1,0 +1,26 @@
+{
+  "source": "scripted",
+  "model": "scripted",
+  "run_id": "2026-11-15T00-00-00-000Z",
+  "case_id": "missing-email",
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 0,
+      "response": {
+        "model": "scripted",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "text",
+            "text": "Please provide the email used for the order so I can check its status."
+          }
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  ]
+}

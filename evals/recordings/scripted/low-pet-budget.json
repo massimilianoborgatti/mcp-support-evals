@@ -1,0 +1,49 @@
+{
+  "source": "scripted",
+  "model": "scripted",
+  "run_id": "2026-11-15T00-00-00-000Z",
+  "case_id": "low-pet-budget",
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 0,
+      "response": {
+        "model": "scripted",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_1_1",
+            "name": "find_plants",
+            "input": {
+              "light": "low",
+              "pet_safe": true,
+              "max_price": 24
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "latency_ms": 0,
+      "response": {
+        "model": "scripted",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "text",
+            "text": "The Parlor palm fits at 24 credits."
+          }
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  ]
+}

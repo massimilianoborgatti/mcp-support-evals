@@ -1,0 +1,68 @@
+{
+  "source": "scripted",
+  "model": "scripted",
+  "run_id": "2026-11-15T00-00-00-000Z",
+  "case_id": "pickup-hours",
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 0,
+      "response": {
+        "model": "scripted",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_1_1",
+            "name": "search_help_articles",
+            "input": {
+              "query": "pickup opening hours"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "latency_ms": 0,
+      "response": {
+        "model": "scripted",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_2_1",
+            "name": "get_help_article",
+            "input": {
+              "id": "pickup-01"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "latency_ms": 0,
+      "response": {
+        "model": "scripted",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "text",
+            "text": "The pickup point opens Tuesday through Saturday. [pickup-01]"
+          }
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  ]
+}

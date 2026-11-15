@@ -4,6 +4,7 @@ import { z } from 'zod';
 import {
   articles,
   articleSchema,
+  type Article,
   lightSchema,
   orders,
   orderStatusSchema,
@@ -11,7 +12,7 @@ import {
   plantSchema,
 } from './fixtures.js';
 import { createReturnStore } from './returns.js';
-import { searchHelpArticles } from './search.js';
+import { createHelpSearch } from './search.js';
 
 const orderLookupSchema = {
   order_id: z
@@ -23,7 +24,7 @@ const orderLookupSchema = {
 };
 const articleId = z.string().trim().min(1).max(80);
 const readOnly = { readOnlyHint: true, openWorldHint: false };
-const articlesById = new Map(articles.map((article) => [article.id, article]));
+const defaultSearch = createHelpSearch(articles);
 
 const errors = {
   not_found: 'Not found.',
@@ -39,7 +40,10 @@ function success(data: Record<string, unknown>): CallToolResult {
 
 function failure(code: keyof typeof errors): CallToolResult {
   const data = { error: { code, message: errors[code] } };
-  return { ...success(data), isError: true };
+  return {
+    content: [{ type: 'text', text: JSON.stringify(data) }],
+    isError: true,
+  };
 }
 
 function findOrder(orderId: string, email: string) {
@@ -48,8 +52,16 @@ function findOrder(orderId: string, email: string) {
   );
 }
 
-export function createShopServer(returns = createReturnStore()): McpServer {
+export function createShopServer(
+  returns = createReturnStore(),
+  helpArticles: readonly Article[] = articles,
+): McpServer {
   const server = new McpServer({ name: 'mcp-support-evals', version: '0.1.0' });
+  const articlesById = new Map(
+    helpArticles.map((article) => [article.id, article]),
+  );
+  const search =
+    helpArticles === articles ? defaultSearch : createHelpSearch(helpArticles);
 
   server.registerTool(
     'search_help_articles',
@@ -58,7 +70,7 @@ export function createShopServer(returns = createReturnStore()): McpServer {
         'Search Demo Plant Shop policies and plant care guides by keyword. Returns ranked article IDs, titles and snippets. Use get_help_article to read the full article.',
       inputSchema: {
         query: z.string().trim().min(1).max(500),
-        limit: z.number().int().min(1).max(10),
+        limit: z.number().int().min(1).max(10).default(5),
       },
       outputSchema: {
         articles: z.array(
@@ -69,8 +81,7 @@ export function createShopServer(returns = createReturnStore()): McpServer {
       },
       annotations: readOnly,
     },
-    ({ query, limit }) =>
-      success({ articles: searchHelpArticles(query, limit) }),
+    ({ query, limit }) => success({ articles: search(query, limit) }),
   );
 
   server.registerTool(
@@ -142,6 +153,7 @@ export function createShopServer(returns = createReturnStore()): McpServer {
         reason: z.string(),
         status: z.enum(['preview', 'pending']),
         request_id: z.string().nullable(),
+        already_exists: z.boolean().optional(),
       },
       annotations: {
         readOnlyHint: false,
@@ -165,7 +177,7 @@ export function createShopServer(returns = createReturnStore()): McpServer {
     },
   );
 
-  for (const article of articles) {
+  for (const article of helpArticles) {
     server.registerResource(
       article.id,
       `plant-shop://help/${article.id}`,

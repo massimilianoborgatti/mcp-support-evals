@@ -1,0 +1,47 @@
+{
+  "source": "scripted",
+  "model": "scripted",
+  "run_id": "2026-11-15T00-00-00-000Z",
+  "case_id": "orchid-humidity",
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 0,
+      "response": {
+        "model": "scripted",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_1_1",
+            "name": "get_help_article",
+            "input": {
+              "id": "eval-01"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "latency_ms": 0,
+      "response": {
+        "model": "scripted",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "text",
+            "text": "Orchids prefer moderate humidity [eval-01]."
+          }
+        ],
+        "usage": {
+          "input_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  ]
+}
