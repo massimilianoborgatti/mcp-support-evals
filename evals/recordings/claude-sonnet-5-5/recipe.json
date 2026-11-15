@@ -1,0 +1,55 @@
+{
+  "source": "live",
+  "model": "claude-sonnet-5-5",
+  "run_id": "2026-11-15T16-15-02-052Z",
+  "case_id": "recipe",
+  "budget_usd": 2,
+  "rates": {
+    "input_per_million": 2,
+    "output_per_million": 10
+  },
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 2531.0378999999957,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSigYKEAgTGAI4AUIIdGhpbmtpbmcSDCEP3ygcCpvvHMIFgRoMfCoFusIspEhVsMJoIjBjujsoAKbYz4Ujm8M2q7trHmmIEmIzOjx7GuMrHQLrp83xRIxGZ5VkHX6sHTeV8FUqpwXgZ0HRoPuHdXKJGMFw7BvC4s4crH23CzDDsa+MFDFbF9BfQPuUPd3YvcRoWxmBYe4OdVup7T1Hnrxx3gR2PO2mPeVUN6Qts6uNdyeMjeF2EPIZ6hFW/9M5zbDF88K4z1xp3b1Mt3wxDxEqtQrc0xydbT+xGIV6+qdm09sLdp1CSDysokuPmhbt4u8IRkwd9oiF/4FLJ7dTwLL2Ys0kUk6xbPbRET8z8aZfTaCFI4dIRCr+C2l2YrvTncq7ONAe6r5pqCYAgvreHIKaHUAAWAYQM+NtHfB/LTbF9XnHVMnBv7hl/uf9W8522acx161NCel9R4ZYfK6cuBzdVq0GIyRi2UigAHGoIeP+W07DkB2jJrYdzXmn5065qghBVADmLGv97sP8+PDbIZsq+OaDOl2YR+53JHE/VfZz9LVr7ZzGcfRiTsvqUsH+IbrLkvWW/rlyRrPc3LQ+ZUblFPom1TkWAaP5vdO01/Oe1QSZ9BrILYh78aAa4oTgtXlTf4ZzV7VLgCCcVwaKnNmsSPAJbtoUSYDj561AXzQdUu1P5GcZRHzelOK6dQ09F5sO+TLQvT25WvxYZV0wyC5o51OI1Ax8+mXVgxi44ZKxS4pxdw4r43jugGC5Qhrf2ewuV0euhoiB8YojiJkBkc5lpy1992qZJFCupKhnR6kC3P498JYVlLqT9ONahVX+CY55/RQqlJzO9FvsOuUMBxStDsphD2iGwdpuFhjmimsM9dObpsoPfAxRQEQbzFQoksow1T/IBZ823AxsEuJXCi0kDtZZ65SpgzqZ3dpqipdj0sRwswMyA7bCFyMjXXnpQSS0B3/5DndQvTrSst3zH1ta8peQFV+j9fdHmDYDXUk7syHwucBwPeDtdtXYjHVNt3PmKHdi4L02kgGVlnAxGAE="
+          },
+          {
+            "type": "text",
+            "text": "I'm sorry, but I can't help with cooking questions like mushroom risotto. I can only help with Demo Plant Shop topics, such as plant care, plant recommendations, order status, and returns. If you have a question about any of those, I'm happy to help."
+          }
+        ],
+        "usage": {
+          "input_tokens": 1527,
+          "output_tokens": 143,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 59
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch51pzpWZ3Aq1dsM6WJuR",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    }
+  ]
+}

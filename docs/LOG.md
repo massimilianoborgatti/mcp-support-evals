@@ -23,3 +23,7 @@ Made the search limit optional, marked repeated return submissions with `already
 The committed scripted recordings passed all 54 cases across six categories in 105 model turns. This verifies the harness with scripted inputs. Live model performance, latency, token usage and costs remain unmeasured pending the first run.
 
 Formatting, type-aware lint, type checking, the build and all 28 tests passed. Replay produced the same report with `fetch` disabled. The dependency audit reported no known vulnerabilities.
+
+## Results and documentation
+
+On 2026-11-15, the Claude Sonnet 5.5 smoke run passed all three selected cases. The full live baseline graded 54 cases and passed 47. It used 99 model calls at an estimated $0.413340 and finished within the $2 budget. The README table comes from the saved results. Replay of the baseline on the original agent matched the saved per-case results and aggregate metrics.

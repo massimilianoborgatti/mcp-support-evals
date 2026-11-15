@@ -1,0 +1,65 @@
+{
+  "source": "live",
+  "model": "claude-sonnet-5-5",
+  "run_id": "2026-11-15T16-15-02-052Z",
+  "case_id": "submit-pot",
+  "budget_usd": 2,
+  "rates": {
+    "input_per_million": 2,
+    "output_per_million": 10
+  },
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 3069.3400999999867,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS/QgKEAgTGAI4AUIIdGhpbmtpbmcSDKBVr/V/vd+KzOySMRoMMoQAQ4jIbK1DizH1IjAnPdLPDV6dWvPKBGCxA9a6LgqmuhXl9mhU98mc7TWaNUh1GbA1m1O4qUXGZs13qicqmggF0NUbch7gMcDHDBeHmPesZo5qtkveYjsFCbgptfaYaGYnusHymqrPUsmlDMDKytIgSPC59HAMdTREEuguuLjXIXGVM7OhBKEoBg7q96qhsnWnBEvLxvqSpscLso7jq9gF8Km/SOSYLuWBsQNebCEeMBWdypcan3E1iUSiGGoLdd3XlnVxFJ+wUril26xyL7QhijvQ4arKL+6YFqwqLOl7C20z1oNxCXweQmcS1dWOcfu0kGZ0mLtI/Fao7R3i1tV1Kf7UxaAQrSzFHcF2zvEoclmnxJ9y+QBT9d1kNda8gKEJEjD7dF1GpKWHBDAVYTH5Q5PwqwKUQ3XWth8vM6HFkH1m4emzSKH6SmMeYxcXtgeU4Hl0heiiXjy1BEYgeBNcWh1FDadAIY7Vl29YAE9JDeF6uoygZtiJKhNWjfX4dgoVxMg+DzhXDDLhmMFCZ9vNPdjGEmHm7l8NQ6Sy25E4xzuG0G/fAFA945qNi3ld1jiuJipmR93UDCorHLmLjP7ZkPKMC6sxNeXm9JxGpa42F0A35kA1GkQtiecCreKm36sPGxuPEkDYy0ZGcKlbLSz86WD8rGrnxS9HsjnyBIY47y3Zbq57BOq+KELiaAu5lLH60gH7cGyCklYOkA4ZfcmMY+z8+wWFtRewqu5RkQl+eJHXDSkbw4UOSSHjT2//Rn3SGTMnNqRcYHwbsdr9BLtHtPE5EzMDSwWMC2DeAEw3MuQuoCSvIaJFzRb6qVPGY/7FQh+3Y8MkvqDAtY1gbdUx4+qk6grxdz8DVssb+MCUF9okmfrscRapWWBzMACT9j1Ia1wIRcBv/Fk+s/LdrBjAsPL18jarrm/enCCfwlYZTFXcud56P66S1PyJszjuyEISoeVx8Q4DGntVpayf5sPgxI22b+YdCtLi5rX5dA/bLFW4ciuknQ5bvbsojlyKCioawTc1FKXxO69vL8n86EU9YXffb3QjahRr0P/ZexrRIzp6sjXD999KQ5iTLrox39uJ3tbnBSbq1KDP7HzC3WRfDEeF7foNdJOvp6ANlJCMOunjyLePhSU4Yh6TAs2f+iG904X90tgb07i5WnFN7Ix2U/FUxHv5TI893dAc5UxmTC1v3NtrOoUpuL8YIGy+94cWEEukKkPnjKyBDb87I53GzdeKHY92XkTMN7aw/t/OrCHngxPvFYsB1GJdJxujrl3+K557IRcThttmNpu0hg1KyLZ7xpOFMVYdDacf5M1Wsvyf/XFhI5QYIWlhLmk/XP1aY4pSmzwg0ckKw5Lyz2pId3y7gv6/X7l1N1gK+6Y/hcT247ekY2zIX0MMYjxCpq4vBAXEDHP9sZ3Rhpu/8ZA5i+cZp5nUdPMh384tai1LQ8HRTQBiCDtqLzrkhDNJYjusY4ENtsRiqf0YAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01YHcG4HpbC1fbGjV9jtAG7f",
+            "name": "create_return_request",
+            "input": {
+              "order_id": "ORD-1012",
+              "email": "maple@example.invalid",
+              "reason": "Cracked pot",
+              "confirm": true
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 1567,
+          "output_tokens": 303,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 168
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch51kPkkAAwhPyXVrvCdY",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    }
+  ]
+}
