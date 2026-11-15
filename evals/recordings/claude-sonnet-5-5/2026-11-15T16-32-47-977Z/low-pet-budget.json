@@ -1,0 +1,95 @@
+{
+  "source": "live",
+  "model": "claude-sonnet-5-5",
+  "run_id": "2026-11-15T16-32-47-977Z",
+  "case_id": "low-pet-budget",
+  "budget_usd": 2,
+  "rates": {
+    "input_per_million": 2,
+    "output_per_million": 10
+  },
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 2496.8059000000003,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_012Az71ZAwTZBib5K6sAGG78",
+            "name": "find_plants",
+            "input": {
+              "light": "low",
+              "pet_safe": true,
+              "max_price": 24
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 1535,
+          "output_tokens": 96,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch52zaPDWAqhPwRJpnLin",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    },
+    {
+      "latency_ms": 1406.6219,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "text",
+            "text": "The only pet-safe low-light plant at 24 credits or less is the **Parlor palm**, which costs 24 credits."
+          }
+        ],
+        "usage": {
+          "input_tokens": 1689,
+          "output_tokens": 42,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch52zjqFMD17SV2qMYNjt",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    }
+  ]
+}

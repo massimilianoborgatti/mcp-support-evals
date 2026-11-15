@@ -1,0 +1,100 @@
+{
+  "source": "live",
+  "model": "claude-sonnet-5-5",
+  "run_id": "2026-11-15T16-32-47-977Z",
+  "case_id": "low-no-pet",
+  "budget_usd": 2,
+  "rates": {
+    "input_per_million": 2,
+    "output_per_million": 10
+  },
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 2173.9651999999987,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS/QUKEAgTGAI4AUIIdGhpbmtpbmcSDFvqSe+sSCxyyowjixoMN+zpkrvNNPfI5Rz4IjAsN5f4+MDhCi4e3KO0EtCC5XyIb1IrJWURpdKGLwKq//ORwDKZFAifxQdokoPU3aYqmgWZuNo3Pu+nSFHm5ElWh/y9y6CMGPXGnXQSWIFx31NMQ/ZTnIJDpQXMzaLVPW3rwEQ4VQ0C3E1rZ09LUJBd38KqjF5WqGsyU9y+vI/OrFSbf+INZjQOHhT6sWfgroi/ItH7n9CH+AIrgD7hFr9M7nIqyPZZ0T1sWTY3On3UkR/mzmuPC8vAQ9SNpotFHq95/2KAvv3piQe+HIizrb/enYKG10WPunjBxnGxtqZ9fAE+Ud26bU05d0AVfCcg9N2WW50w3wCId5WeJqftPqCb3ArxXSAqmaGkFv0fdFpXk8gFKxOyfp8hvFQMrC4gbB9l7kjFjuWC9LAFWJyJ+oSmHVt3LaMlJWFzEYBFevOGg7eiykcVMPJr28f9WNY9DnwG2rNePe11Bw7NNrtHU83o6zgijKUmP2Uj/bO1PVTxnErwVIv4Z3gznpSfyYA3cvmS8Xr2n0dltjzXoV5gj1XnZ8NWcGCrPBKqKnx55sL1E+9ZMoymG/3NcyaGzb1OPhZVLGRfbV7PZbWYKKCtQZZ3BIUxUPy6KUD7U36lJxD+2Sqr6Jf+OpA4OWQIbeXQfcc9WAMM6s3qSoi6ioTi/SkX/64f9d5yIBB8jRsLSUdqHfTIFEtuIkSGN9/WhdV8SW5Op/h+91c2D0eBYQP9xZ1s26uFCGxnJ9GcL0cG23TQGis3K4E8vEXzdx/7//Tk8D9G0z8rw+eFFbNxduwd65IzOUn3gY/KXhaR21M8cZnCMdlCoJI0DY6vB3kUHv6u74SHrEa4bQ8T6YuR1IK7jJ8RRYAt+2cbrQpLgQrIbKN8X3moRs7Q5nFPMV+/DjUMIX403itQJe3Q5buiRBqGJ8SOrurRaKPEwWOh5gK6LleFpZD0y4nkXezXgIIoF9sYAQ=="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01396BDgFpJyHCPACew6WhTJ",
+            "name": "find_plants",
+            "input": {
+              "light": "low",
+              "pet_safe": false,
+              "max_price": 15
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 1538,
+          "output_tokens": 162,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 65
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch531DWt8MUipnYcfb5of",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    },
+    {
+      "latency_ms": 1394.6086999999989,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "text",
+            "text": "The only low-light plant marked not pet-safe at 15 credits or less is the **Golden pothos**, which costs 15 credits."
+          }
+        ],
+        "usage": {
+          "input_tokens": 1758,
+          "output_tokens": 45,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch531NqxiyoynHh2aAiLc",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    }
+  ]
+}

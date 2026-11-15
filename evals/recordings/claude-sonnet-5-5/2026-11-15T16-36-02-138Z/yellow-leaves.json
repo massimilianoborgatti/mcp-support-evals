@@ -1,0 +1,136 @@
+{
+  "source": "live",
+  "model": "claude-sonnet-5-5",
+  "run_id": "2026-11-15T16-36-02-138Z",
+  "case_id": "yellow-leaves",
+  "budget_usd": 2,
+  "rates": {
+    "input_per_million": 2,
+    "output_per_million": 10
+  },
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 1850.891899999995,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01RhM3eCAi5AUAZ21vgrjXKD",
+            "name": "search_help_articles",
+            "input": {
+              "query": "yellow leaves"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 1589,
+          "output_tokens": 55,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch53JNapBNdTpMS7VT3pL",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    },
+    {
+      "latency_ms": 1071.0532999999996,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01EgY7aWb75zFcc4BJ3N2wpd",
+            "name": "get_help_article",
+            "input": {
+              "id": "care-03"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 1880,
+          "output_tokens": 51,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch53JWBD8HG3S2fCatUsm",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    },
+    {
+      "latency_ms": 1263.4660000000003,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "text",
+            "text": "Start by checking two things: soil moisture and the light the plant gets. Compare both with your plant's care card. If either is off, change only one factor at a time so you can tell what fixed it. [care-03]"
+          }
+        ],
+        "usage": {
+          "input_tokens": 2012,
+          "output_tokens": 65,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch53JakYonf56onQWYSW1",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    }
+  ]
+}

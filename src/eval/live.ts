@@ -27,6 +27,7 @@ async function main() {
   const { values } = parseArgs({
     options: {
       'max-cases': { type: 'string' },
+      'archive-recordings': { type: 'boolean', default: false },
       'budget-usd': { type: 'string', default: '2' },
       'input-usd-per-million': { type: 'string' },
       'output-usd-per-million': { type: 'string' },
@@ -82,7 +83,7 @@ async function main() {
           budget.charge(turn);
           servedModels.add(turn.response.model);
           recording.turns.push(turn);
-          await saveRecording(recording);
+          await saveRecording(recording, values['archive-recordings']);
           return turn;
         },
         model,
@@ -93,7 +94,7 @@ async function main() {
 
     budgetStopped = result.stop === 'budget';
     recording.state = budgetStopped ? 'budget' : 'complete';
-    await saveRecording(recording);
+    await saveRecording(recording, values['archive-recordings']);
     results.push(caseResult(scenario, result, recording));
     const summary = summarize(results, rates);
     await saveResults(model, runId, false, {

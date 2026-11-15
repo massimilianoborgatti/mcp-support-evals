@@ -1,0 +1,64 @@
+{
+  "source": "live",
+  "model": "claude-sonnet-5-5",
+  "run_id": "2026-11-15T16-15-02-052Z",
+  "case_id": "low-no-pet",
+  "budget_usd": 2,
+  "rates": {
+    "input_per_million": 2,
+    "output_per_million": 10
+  },
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 2491.0925000000007,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS+AUKEAgTGAI4AUIIdGhpbmtpbmcSDODE+dMXJcaW6hc0RRoMqR7YYbmuT+SdhmheIjAmZLncNGLMAclNkWpIEdLVMkEKhmB3bl/+fH/EgOnS7/408qDYEdSsy+GgUIZtoYsqlQWkwTfI/ayo5tmlnrPJ1Aorz4DwGiXsXEuTj8i5mH1FL6VjeL44BtIZeR8zJAHMaF2bkTDixMtGRgAiUpfPZA3TOoyGbWUHXGRek/kg2O7jiFKKywIHstSrW+3mwW9ibvOedg+HFjHOxRZG0UYYl0qFm3nKWe6dBxS/bcNDMCQI62ZgZbsAnW7Hnlwsfq/SqXLT6aqtcATj6Pevo9chWWNyMHynatA5GQCnzNPrqV5kvl1OasmLqWWddK8RVcBWf2nYKE6eWOE+s8iRjkFgutS79OPZX8PXXEzSNkU5UJABNMCbQx/j52+oAzsKyutAXf9SGv3J36TNdBg/J5vnflf8XCvSzn+VuphNvBBG9SbJcNL30sBI6HShqyx3IOWyt5xXGobVd3j+k/YwkQpHvRlvx1i8/+VmopzlOwcPjWV857U2o68iB6GAqF0jqDtq/+AyND7B6HDfwJ2u6d/8D2+KvKBf3fimLZnHngLWgyQ4z2Biwf36xUh5aRWKPl/4g1sH2BDikHKFPRKJdKPaef/lUQPy5v4ZpSKjwVw65MRM8aykt05zEqSBZaBQCoFbhk1IphsL0wd1kUI9j0scY9R2n006You2aKAtdZ9na1XFkWId9hh7XePEWtovXvq6f6bvAnthC6SD4qXzIdnygr4hjLk2fgcr3OikRBor5W6w9HBleux4iOxjrQyXrCiwnv2z9S0Ro8Fb9TwoqW06Oj47OdVrLaK881spYT+3ZMZ2JUhzHZ+/txlRXjvFvFukMlWFsFh8FOX7oPZJmtgCYb5UuezsD1UTui8MQhtWTt98YBRMA9vJya05P8WUloEHd24JJspnufdfzFkWt0G0HsfXJ45U9QnxJVTCPxBw+/fBSfIjtS/TGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_01JjMctnugMx5fiFJdVJEYnw",
+            "name": "find_plants",
+            "input": {
+              "light": "low",
+              "pet_safe": false,
+              "max_price": 15
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 1538,
+          "output_tokens": 158,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 61
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch51eZdumAYiMb492MqrP",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    }
+  ]
+}

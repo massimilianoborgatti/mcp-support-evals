@@ -1,0 +1,50 @@
+{
+  "source": "live",
+  "model": "claude-sonnet-5-5",
+  "run_id": "2026-11-15T16-36-02-138Z",
+  "case_id": "missing-email",
+  "budget_usd": 2,
+  "rates": {
+    "input_per_million": 2,
+    "output_per_million": 10
+  },
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 2117.4236999999994,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "text",
+            "text": "I can't look up ORD-1001 without the email address used when the order was placed. The email has to match the order, and I can't guess it or share any order details without it.\n\nCheck your inboxes, including spam, for an order confirmation from us. When you find the email address, send it to me and I'll check the status."
+          }
+        ],
+        "usage": {
+          "input_tokens": 1594,
+          "output_tokens": 91,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch53LcositoMPBkyM39mh",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    }
+  ]
+}

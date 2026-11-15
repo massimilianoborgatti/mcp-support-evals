@@ -1,0 +1,101 @@
+{
+  "source": "live",
+  "model": "claude-sonnet-5-5",
+  "run_id": "2026-11-15T16-32-47-977Z",
+  "case_id": "submit-pot",
+  "budget_usd": 2,
+  "rates": {
+    "input_per_million": 2,
+    "output_per_million": 10
+  },
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 2988.9100000000035,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS5wkKEAgTGAI4AUIIdGhpbmtpbmcSDEYYDVw3BChhjpJVNRoMgxpqW88ajoujWUyTIjDiLcpFU40oTglhd0KpT2rE5LVwzLOI40nQAEBvsvCoJlB5Y/tHT3poQv/lnm2+5qUqhAmmoc8ld8XkoSN9WEShwiXiokcvrKYh3Zb/hUxVY3sRmQm1KAjPlotT5T/UYvzJtvx5p7gnucqXk15mnfG5womO4z81rneZyLQcxwPfp3ebKcS0rbKglZTDCGlywB4FxHiY4BioqZn7dOkPYOEfZKaohAKCdzCAkfWqZoP+7+UuEP0LSTfAp9U5rT88QLKHEnH/ngb7NlYXv4386EniySW43PyLhh3sd3EYAaosR34wlL/rgo2UAa746Ub/787p6y56+mQICMF8xDlWmOaoxrehgvNN2JuKApjTnLwsm5CjJkOZhkj1gRfSnDZn3+AJXyqM08TjooWTRhpU7EKpCy5QFvQEgqmEzOyA9BkmsJmFGRBiZ93nuhlFuWIGmIASAuglRZy2lP9tK7IwfgOzspjlay35KIhjYmXv2chp0OFNjEqFy7c4tXLWtYFM+yQwvvWoOHPni/Omhuvz2BLE/6gMR5ShHaFUsVrjeX0IK0mjE3fxfWk64cLqsembROgXokB5ejpIbwlE8cH1AFtH7bZYdRE+810tjXYfLRvqrOBjnuRyth9zTDKmMPu1n0iHebRxprIjQ0krfh5AAdTZ3cj8EaSIvj7Q1Pr3Hi7wGMb9xnrmagZ+J19f37e1lAZFdDvYKY2Twi4iqk5s3ZbXEPQdaCdNrKQDnb6hPt+7B1FwXyyVkpZ1wyO/y+VCMrQtGKkm32a4JBNbQt3eL9RYuWxpSF15nedHzen+8XWTu3qLXCMCEx8WBSdP8ybYLpDyn9WkS9Os5Sv93tXOIsR3yF2uKu0FTF4wLVc0ZIP+sSl6ngQb97kk5jEOF9aHN0HF31Zts7+n/fwPT2GsBWIAS+K6n7x/SFhoZF7+qRPjp9Ryfba6pRM+T31LT9W6ltXXriDvADUy45YKZ3vL8X0FrVPuUc2LuthyqkLWJR4acploFUl9QTAYpQ9rdXchRmdJIs29Ncj1EPULttN4omJCGitC4l4ORXmRINilzW/rMcte1FPS+hsllcjSQ7C3v0hJf4qI2bC79siRLeVQ3N7vRDTZJZxotebwCaczVeP46S0854KpwVbFfuMwmkuz8siVyeZ2fgwm6AU/ypL3szhh3jnX/2CP4ulAMNW63+K+hbmdopBXlJE6UUesU5O7N1FwxU1EVkYoGkd16ao2yodnJFsHDDtn7JRU6RdHRDJsV9tO+N31c5RIB+4MSZtZQE3K7jVJ9mVVh2UiSq7VxOucDWTicYuGcyDTdviHn5tERuFuaoFW+Z7CqJzzn7LiLIGchfVugbNwzO9hYdjEkSIDwlwb7BjFee8IFSggHF/+XQSnekUy8e4X94ygCApPUJIZT/DSfUkksGrEukiZnZpya5DCJTMHqUa8334+G7Vma4XxsELoEnkUfBwKCJ9OZsM4iWXWjUbjtkq/Tw/vRZ9TlzzQjgp2hKbOTCFbImMyaFmhV+7XC7DvFgZUaSOu/xP+9ttPKm9Owz7TOPkS3BTNpisU2qnrdcIHihgqtqYfHvwDewZqHlfECaDwXBTjb86LP86Nj9noGAE="
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_014kEMtNGdjZnAocPPgFQbwt",
+            "name": "create_return_request",
+            "input": {
+              "order_id": "ORD-1012",
+              "email": "maple@example.invalid",
+              "reason": "Cracked pot",
+              "confirm": true
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 1567,
+          "output_tokens": 336,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 201
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch536zfeKhrYA1zJ9M864",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    },
+    {
+      "latency_ms": 1155.9743000000017,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "text",
+            "text": "Your return request has been submitted.\n\n- **Return ID:** RET-0001\n- **Order:** ORD-1012\n- **Reason:** Cracked pot\n- **Status:** Pending"
+          }
+        ],
+        "usage": {
+          "input_tokens": 1962,
+          "output_tokens": 63,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch537DWYyhghjGEnhy4HL",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    }
+  ]
+}

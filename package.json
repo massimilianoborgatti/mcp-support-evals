@@ -17,7 +17,9 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "eval:replay": "node dist/eval/replay.js",
-    "eval:live": "node --env-file=.env.local dist/eval/live.js"
+    "eval:live": "node --env-file=.env.local dist/eval/live.js",
+    "report": "node --experimental-strip-types scripts/report.ts",
+    "report:check": "npm run report -- --check"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

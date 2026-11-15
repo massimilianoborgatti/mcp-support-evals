@@ -1,0 +1,101 @@
+{
+  "source": "live",
+  "model": "claude-sonnet-5-5",
+  "run_id": "2026-11-15T16-36-02-138Z",
+  "case_id": "submit-size",
+  "budget_usd": 2,
+  "rates": {
+    "input_per_million": 2,
+    "output_per_million": 10
+  },
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 2092.5053999999946,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQS7AcKEAgTGAI4AUIIdGhpbmtpbmcSDC6lku38KoN4JlhemhoMobo48W/qS1ZcheDsIjAIh33QZdo/wXzhy4gylB3Ams3in8Y5SkbS3WZp2VKFccYmyQHbeY01gpFXfKTpnTwqiQdpNUAEN3JmZ0WeX7BHC+A2wLXMtkVryb/oipT9DFb6YYGmDGX/UbSmSPqBXaJAqakl6M0+rvatzifIQH0WK2WldTYxPT+hNYiL+u0XpGmiDZ0GWJPq/lCXtG+dgrMD3M6EFFYgSBEpnMOSf/sGbz4G6+0cjC9hZb0vbZc0m0TV5l1LCtQ7kPdOx9BPqt8G6mhqvQ3EaBRafg2NByNCqqbt54Oy9F+G0aBGYiuoqtOCj5Rjr6tzQ50mikPDrwzl2eY5LFT03UxcAvMNRC/E9tAoHFyszv5pAHnePQm0pdCaF0BhYuPwODebVCkst9ZF52C1j7hlS76ymH7X6TPtpskW1ZImd4joKvILwvjR7GRhzjHB5XqpTc8b6I67mXjt/5mxZgJgByzscyJuzGdr5tDHpA4Rwmhudw4mkVTfeSy5DO5nd9iHcgT/mNFymVtp2PJbU7+ZxJDmGnOweKRbE2xt0ln7SYP7bxaGfoU1dklhkMBvaZrOPW5jhz1WxtdPEB2GNCS20nQhhVfA3T77WVCQ+me14lYhek5Xrpl/r0mW9XZ1gSI+G1Z9qCJYjpV4+Ma3k0GQBlSPuPY5STLBm/3sNTvP6gzycHMb1Gl91sBUQeYXmjOJGPFd0cqae7lSeXX0RD3ZNTfRWAFTL91oj/rac6iuUHKMOjftwMmxzfGa1+fnPs1Zt7TpfMcMRD3wgkoiPK8c1qkoeaR/mu4WYkGd41086sgLRJ60W40qAS+8qe1Qfysbq8inE1RNOGhWtglnCZFlTe6zSAW5tsUox8MuwofpkidBqMVDzcTl+J7kclFHR9CQPo9G0o2KK448TULfV7a+uBJUykKR4hlupSRV6Hpsn/BLfjhV8s2vBuUpSleAqPkMyHpr11vKqICxPPEyqZTJzdhRTjXbfS4bYj/GL954V39azOWkMhKrT75tZgrwhRZ/Efy4lshdyUsjeS9bX4Auo8NPbB4MaVKaqZ7J1LUwElFKaobmWUKhVX+kY/9YOzXD/uIPUx5N+64epjbDeiroiUBNH8zSfNazBFfD01LOEpYOimv18N6XNa3fFSrOsSBpv2IXKxSQNUFbNHG2lDjbcCTx+zTf5ev92sbDkTVg1OfgFRI6BLWdw/aOr8ttxnz7dNHIpoy5dD8zEZHYsLzRcYbixaFbcxlx238D13UqgOLg7+EtGGghw24Hgfwzrt5wyNjv4RgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_0161tRHSdaS1RjDUBJUuSN9B",
+            "name": "create_return_request",
+            "input": {
+              "order_id": "ORD-1015",
+              "email": "mint@example.invalid",
+              "reason": "Wrong size",
+              "confirm": true
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 1625,
+          "output_tokens": 260,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 126
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch53NCQWAsY8iCRhjJJFC",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    },
+    {
+      "latency_ms": 1368.0072999999975,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "text",
+            "text": "Your return request has been submitted.\n\n- **Order:** ORD-1015\n- **Reason:** Wrong size\n- **Return ID:** RET-0001\n- **Status:** Pending"
+          }
+        ],
+        "usage": {
+          "input_tokens": 1943,
+          "output_tokens": 62,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch53NMSiMj9NbTLVhHdnp",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "source": "live",
+  "model": "claude-sonnet-5-5",
+  "run_id": "2026-11-15T16-15-02-052Z",
+  "case_id": "preview-gift",
+  "budget_usd": 2,
+  "rates": {
+    "input_per_million": 2,
+    "output_per_million": 10
+  },
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 1228.4045000000042,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_01Cxv7tdzP8P4Ka4LtFgj93M",
+            "name": "create_return_request",
+            "input": {
+              "order_id": "ORD-1006",
+              "email": "sage@example.invalid",
+              "reason": "Duplicate gift",
+              "confirm": false
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 1561,
+          "output_tokens": 135,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch51jzciD67jXzD45Ec57",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    },
+    {
+      "latency_ms": 1394.8044999999984,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "text",
+            "text": "Here is the return preview. I haven't submitted anything.\n\n- **Order:** ORD-1006\n- **Email:** sage@example.invalid\n- **Reason:** Duplicate gift\n- **Status:** Preview only (no return request created)\n\nDo you want me to submit this return request? Reply \"yes, confirm\" to submit it exactly as shown. If you want to change anything, tell me what."
+          }
+        ],
+        "usage": {
+          "input_tokens": 1744,
+          "output_tokens": 128,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch51k5vhK2iKUwmeYzaoq",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    }
+  ]
+}

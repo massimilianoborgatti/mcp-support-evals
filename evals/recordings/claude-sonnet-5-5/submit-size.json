@@ -1,0 +1,65 @@
+{
+  "source": "live",
+  "model": "claude-sonnet-5-5",
+  "run_id": "2026-11-15T16-15-02-052Z",
+  "case_id": "submit-size",
+  "budget_usd": 2,
+  "rates": {
+    "input_per_million": 2,
+    "output_per_million": 10
+  },
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 2520.6217999999935,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSuAkKEAgTGAI4AUIIdGhpbmtpbmcSDEypX6VUFvBIU4fDMRoMDGkXkwxCaQaaT0nyIjAbb0mPMgBejYo7lank1+eU6HBKQz6ZrAp9mjlzJIXl35YSqdudffmRSzygHvLBPD4q1QjIXiIEgry+VC4pE+0cZpCiIBUNxr48vthZLVk2fGyVfmdMpmDjq5id3RzGVD5aVXp2utsie+1aPZMqlhiIs7SSTABRqc7jBL9bHG+YD7ITg/jBTi8MsxAhBuEbgZCwMWaqG0qPPqY0WRqAEfrBdnpZzg/WZZCTv4onNHsK1rFuWGoLEXLL78WyMC+jYhlF1BSqUnKLYMBX8WJbqcntm/7egIpkT0UlJw48iU7lzNyG2QVYLJURKlxNzeMsj+7G6VrZHzyKh6/XWJnC2BgKkSX+6+JO0VXA5RcVsEfT+XxFtZEmlTEozOusOC/vmiDDPUOT9ZCLZNq8be5MfhkvvAo3LtecXZy/W52hQ5S84B9DZoXqF0jSJ12VlJUgzglm8t25z7OZPweedtE3/PjKoi1kCIhYQvwQ6YAUHtrVf2L90SS5J02csmYvOTG1Kvk4x1T9z3mluXb+pp/K3Frn6xz7nNzCB7Y2qE24RRNSdH4NLchIlFs1doNJcII/lt6nSCBV0OH7EhM4ela0kxHA7XKVcFascrIHnlrBKolUqwndmNiVODdDq04OInfmlK4UFLtrtcs/CA5Qq9d+ThsglC9q7beo0Rh4ULTzCLnmOHIGkeKxWu/g8zTJtZM7U9q0s3lONA9DS3bD7hnRCzmSPEth8QVAWFVXzdfl25JqcbpSeT2JtopWD6kXkSwq77yntwixdjrSEPnlsR/HeyFkMq9/5+rK2KOze/UBIEPIA6JFL0i+Wy7u9sLX3H+bHUM1JM4EQd8IVjrxgHJP0+EsEkDTg+36Au59L1UNI3cfeJ2RThnDyGD8HVXK0OjC7a19urZQCdFlu4fYdxI4NzoYi6En3qxZmZ2TFvzNwYLTyI/iWu9ow7gOc9XNEmFCg01UcpLbh4JSO5wPpQoKFon21vQbliExicGzchDe2d7Wje0T77tqsQnjuO8BpUsee9mI/+PGwuGrViV/rGVjt2ovnrOhZ2GEnd5DdKQHatzOvNWq+PAIbeKUFX+Vb8fscQjA4DQOXgPJ2qU6s86ffDmMbGlsZ+q5MOoo+EAnAsBJGSvS9bPtfMLFEg/5e+tMVzFc6pKkW9iX3mldbnzXVmC+Ey2x0P0BLj0CjqnDynwwIZ5I9Y6qAj7VbDGF63XQSjAsaXEA/DmcWgmXqDOhf7INR2o7Y0hc1ndaoMxY/qsXNNjHykEn+jFD0FjPLOLJhDM86VHIN6CLSoZ3U8I2qC6BzSr72RYYsyxy+N/N27w4rNXPYpaNc2bBtScw8l4ZGsloRjj2TW3zGKnsakRcl5URE6CRecq7erCUkEjQ1QTgCv4aEKuWcdQ4ZmhzIws4n5pHp+N3QvHztCFG6Sgi0a34q+zJiwAF1Hd0hvLvis2fnPpurPE1R4wqLI+WyqonbME1A6KEV7UQOh+b+Hnt0T9liXYq/WW8ALJn1OSA8MEkAJmJQkpbUeJ53FuA2CQ+ifed9eC9BYjPKBgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_016G5u15XVpyFdH92skX6yf9",
+            "name": "create_return_request",
+            "input": {
+              "order_id": "ORD-1015",
+              "email": "mint@example.invalid",
+              "reason": "Wrong size",
+              "confirm": true
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 1566,
+          "output_tokens": 321,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 187
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch51kcwWXMb3KWPm3Kyf6",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    }
+  ]
+}
