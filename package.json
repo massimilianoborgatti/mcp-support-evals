@@ -9,10 +9,13 @@
     "node": ">=20"
   },
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/stdio.js",
+    "start:http": "node dist/http-cli.js",
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run --passWithNoTests"
+    "test": "vitest run"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
@@ -27,5 +30,9 @@
     "@typescript-eslint/typescript-estree": {
       "minimatch": "11.0.1"
     }
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "zod": "4.6.7"
   }
 }

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "care-01",
+    "title": "Watering indoor plants",
+    "body": "Check the top two centimeters of soil. When it is dry, water until the excess drains, then empty the saucer. Use the plant's care card to adjust watering for its species."
+  },
+  {
+    "id": "care-02",
+    "title": "Light for indoor plants",
+    "body": "Place plants according to the light on their care card. Bright indirect light reaches the leaves without a direct beam. Move delicate leaves away from harsh midday sun."
+  },
+  {
+    "id": "care-03",
+    "title": "Yellow leaves",
+    "body": "Check soil moisture and available light when leaves turn yellow. Compare the conditions with the care card and adjust one factor at a time."
+  },
+  {
+    "id": "care-04",
+    "title": "Repotting and drainage",
+    "body": "Repot when roots fill the pot. Choose a container with drainage holes that is only slightly larger and use the soil mix listed on the care card."
+  },
+  {
+    "id": "care-05",
+    "title": "Pet safety",
+    "body": "Use the catalog pet-safe filter and read the care card before placing a plant near pets. Keep plants out of chewing reach. If an animal eats a plant and you are concerned, seek veterinary advice."
+  },
+  {
+    "id": "care-06",
+    "title": "Brown leaf tips",
+    "body": "Brown tips may follow dry air or inconsistent watering. Check the care card and current soil moisture before adding more water."
+  },
+  {
+    "id": "care-07",
+    "title": "Acclimating a new plant",
+    "body": "Unpack your new plant promptly and place it where its care card recommends. Give it time to settle before repotting or introducing fertilizer."
+  },
+  {
+    "id": "care-08",
+    "title": "Fertilizing a plant",
+    "body": "Use the fertilizer type and schedule on the care card during active growth. Avoid adding fertilizer to a plant that is already stressed."
+  },
+  {
+    "id": "ship-01",
+    "title": "Shipping times",
+    "body": "Orders leave the shop within two working days. Standard delivery then takes three to five working days. The shop does not dispatch parcels on weekends."
+  },
+  {
+    "id": "ship-02",
+    "title": "Shipping costs",
+    "body": "Standard delivery costs five demo credits per order. Orders of fifty credits or more qualify for free standard delivery."
+  },
+  {
+    "id": "ship-03",
+    "title": "Delivery area",
+    "body": "The shop delivers within the fictional Demo Region. International shipping is unavailable. Local pickup is available for eligible orders."
+  },
+  {
+    "id": "ship-04",
+    "title": "Tracking an order",
+    "body": "A tracking reference appears in the order summary after dispatch. Use the support form if it has not updated for five working days."
+  },
+  {
+    "id": "ship-05",
+    "title": "Cold weather delays",
+    "body": "Dispatch can pause during extreme cold to protect plants in transit. The order summary shows the delay and is updated when packing resumes."
+  },
+  {
+    "id": "ship-06",
+    "title": "Preparing plants for dispatch",
+    "body": "Plants ship in their nursery pots with the soil and leaves secured. Remove the packing gently as soon as the parcel arrives."
+  },
+  {
+    "id": "pickup-01",
+    "title": "Pickup opening hours",
+    "body": "The pickup point opens Tuesday through Saturday from 10:00 to 16:00. Wait for the ready-for-pickup notice before visiting."
+  },
+  {
+    "id": "pickup-02",
+    "title": "Collecting an order",
+    "body": "Bring your order reference when collecting a parcel. The shop holds pickup orders for seven days. Use the support form if another person will collect it."
+  },
+  {
+    "id": "order-01",
+    "title": "Changing an order",
+    "body": "Request changes to an order or a delivery address before dispatch. The support team confirms whether the parcel can still be changed."
+  },
+  {
+    "id": "order-02",
+    "title": "Cancelling an order",
+    "body": "Use the support form to request cancellation before dispatch. Once a parcel has shipped, check the return policy."
+  },
+  {
+    "id": "return-01",
+    "title": "Returning a plant",
+    "body": "Request a return within fourteen days of delivery. Keep the original pot and packaging. A return request is pending until the shop gives instructions."
+  },
+  {
+    "id": "return-02",
+    "title": "Refund timing",
+    "body": "Approved refunds are processed within five working days after inspection. The refund goes back to the original payment method."
+  },
+  {
+    "id": "return-03",
+    "title": "Damaged delivery",
+    "body": "Report a damaged plant within two days of delivery. Include the order reference and a description of the damage. Keep the parcel packaging until support replies."
+  },
+  {
+    "id": "return-04",
+    "title": "Missing items",
+    "body": "If an item is missing, compare the parcel contents with the packing slip and report the missing item through the support form."
+  },
+  {
+    "id": "return-05",
+    "title": "Return request confirmation",
+    "body": "Review the preview before confirming a return request. Confirming records a pending request. Wait for return instructions before sending the parcel back."
+  },
+  {
+    "id": "pay-01",
+    "title": "Payment methods",
+    "body": "The demo shop uses fictional credits at checkout. Orders and payments in this demo are simulated."
+  },
+  {
+    "id": "pay-02",
+    "title": "Payment declined",
+    "body": "If checkout reports a declined payment, check the order summary before trying again. Use the support form if the order status is unclear."
+  },
+  {
+    "id": "pay-03",
+    "title": "Order receipts",
+    "body": "The order summary includes the items, delivery charge and total in demo credits. Use that summary as the receipt for a fictional order."
+  },
+  {
+    "id": "gift-01",
+    "title": "Gift wrapping",
+    "body": "Select paper gift wrapping at checkout for two demo credits. The shop cannot add wrapping once a parcel is dispatched."
+  },
+  {
+    "id": "gift-02",
+    "title": "Gift messages",
+    "body": "Add a short gift message before checkout. The note goes inside the parcel so it stays private until the parcel is opened."
+  },
+  {
+    "id": "contact-01",
+    "title": "Contact support",
+    "body": "Use the help center contact form and include the order reference if relevant. The fictional team replies within two working days."
+  },
+  {
+    "id": "stock-01",
+    "title": "Unavailable plants",
+    "body": "Check the catalog later if a plant is unavailable. The demo shop does not operate a waiting list."
+  }
+]
