@@ -1,0 +1,177 @@
+[
+  {
+    "id": "boston-fern",
+    "name": "Boston fern",
+    "light": "medium",
+    "pet_safe": true,
+    "price": 18
+  },
+  {
+    "id": "spider-plant",
+    "name": "Spider plant",
+    "light": "medium",
+    "pet_safe": true,
+    "price": 12
+  },
+  {
+    "id": "parlor-palm",
+    "name": "Parlor palm",
+    "light": "low",
+    "pet_safe": true,
+    "price": 24
+  },
+  {
+    "id": "cast-iron-plant",
+    "name": "Cast iron plant",
+    "light": "low",
+    "pet_safe": true,
+    "price": 27
+  },
+  {
+    "id": "peacock-plant",
+    "name": "Peacock plant",
+    "light": "medium",
+    "pet_safe": true,
+    "price": 22
+  },
+  {
+    "id": "prayer-plant",
+    "name": "Prayer plant",
+    "light": "medium",
+    "pet_safe": true,
+    "price": 20
+  },
+  {
+    "id": "rattlesnake-plant",
+    "name": "Rattlesnake plant",
+    "light": "medium",
+    "pet_safe": true,
+    "price": 25
+  },
+  {
+    "id": "baby-rubber-plant",
+    "name": "Baby rubber plant",
+    "light": "medium",
+    "pet_safe": true,
+    "price": 16
+  },
+  {
+    "id": "watermelon-peperomia",
+    "name": "Watermelon peperomia",
+    "light": "bright",
+    "pet_safe": true,
+    "price": 21
+  },
+  {
+    "id": "chinese-money-plant",
+    "name": "Chinese money plant",
+    "light": "bright",
+    "pet_safe": true,
+    "price": 17
+  },
+  {
+    "id": "ponytail-palm",
+    "name": "Ponytail palm",
+    "light": "bright",
+    "pet_safe": true,
+    "price": 31
+  },
+  {
+    "id": "haworthia",
+    "name": "Haworthia",
+    "light": "bright",
+    "pet_safe": true,
+    "price": 10
+  },
+  {
+    "id": "burros-tail",
+    "name": "Burro's tail",
+    "light": "bright",
+    "pet_safe": true,
+    "price": 15
+  },
+  {
+    "id": "african-violet",
+    "name": "African violet",
+    "light": "bright",
+    "pet_safe": true,
+    "price": 14
+  },
+  {
+    "id": "moth-orchid",
+    "name": "Moth orchid",
+    "light": "bright",
+    "pet_safe": true,
+    "price": 29
+  },
+  {
+    "id": "monstera",
+    "name": "Monstera",
+    "light": "bright",
+    "pet_safe": false,
+    "price": 33
+  },
+  {
+    "id": "heartleaf-philodendron",
+    "name": "Heartleaf philodendron",
+    "light": "medium",
+    "pet_safe": false,
+    "price": 19
+  },
+  {
+    "id": "golden-pothos",
+    "name": "Golden pothos",
+    "light": "low",
+    "pet_safe": false,
+    "price": 15
+  },
+  {
+    "id": "snake-plant",
+    "name": "Snake plant",
+    "light": "low",
+    "pet_safe": false,
+    "price": 22
+  },
+  {
+    "id": "zz-plant",
+    "name": "ZZ plant",
+    "light": "low",
+    "pet_safe": false,
+    "price": 26
+  },
+  {
+    "id": "rubber-tree",
+    "name": "Rubber tree",
+    "light": "bright",
+    "pet_safe": false,
+    "price": 34
+  },
+  {
+    "id": "fiddle-leaf-fig",
+    "name": "Fiddle leaf fig",
+    "light": "bright",
+    "pet_safe": false,
+    "price": 42
+  },
+  {
+    "id": "aloe-vera",
+    "name": "Aloe vera",
+    "light": "bright",
+    "pet_safe": false,
+    "price": 13
+  },
+  {
+    "id": "peace-lily",
+    "name": "Peace lily",
+    "light": "medium",
+    "pet_safe": false,
+    "price": 23
+  },
+  {
+    "id": "jade-plant",
+    "name": "Jade plant",
+    "light": "bright",
+    "pet_safe": false,
+    "price": 16
+  }
+]

@@ -4,9 +4,9 @@
 
 Set up strict TypeScript, formatting, linting and a credential-free CI workflow. CI uses Node.js 22 and a committed npm lockfile.
 
-## MCP server — planned
+## MCP server — complete
 
-Implement the Demo Plant Shop tools, help resources and support prompt using `@modelcontextprotocol/sdk`. Serve over stdio and local Streamable HTTP. Use a real in-memory MCP client to test tool results, validation, order lookup and return confirmation.
+The Demo Plant Shop tools, help resources and support prompt run over stdio and local Streamable HTTP with `@modelcontextprotocol/sdk`. MCP client tests cover tool results, validation, order lookup and return confirmation. The compiled stdio entry point is documented for local clients.
 
 ## Tool use and evaluation — planned
 
