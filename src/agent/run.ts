@@ -29,6 +29,24 @@ const useBlock = z.object({
   input: z.unknown(),
 });
 
+const thinkingBlock = z.looseObject({
+  type: z.literal('thinking'),
+  thinking: z.string(),
+  signature: z.string(),
+});
+const redactedThinkingBlock = z.looseObject({
+  type: z.literal('redacted_thinking'),
+  data: z.string(),
+});
+const responseContent = z.array(
+  z.discriminatedUnion('type', [
+    textBlock,
+    useBlock,
+    thinkingBlock,
+    redactedThinkingBlock,
+  ]),
+);
+
 function permitsConfirmation(
   input: ToolInput,
   confirmed: ConfirmedReturn | undefined,
@@ -129,9 +147,7 @@ export async function runAgent(
     });
     if (!turn) return { answer: '', calls, stop: 'budget' };
 
-    const content = z
-      .array(z.union([textBlock, useBlock]))
-      .safeParse(turn.response.content);
+    const content = responseContent.safeParse(turn.response.content);
     if (!content.success) return { answer: '', calls, stop: 'incomplete' };
 
     const answer = content.data
@@ -148,6 +164,7 @@ export async function runAgent(
     if (turn.response.stop_reason !== 'tool_use')
       return { answer, calls, stop: 'incomplete' };
 
+    // The provider checks the original thinking blocks when tool use continues.
     messages.push({ role: 'assistant', content: content.data });
     const results: Anthropic.ToolResultBlockParam[] = [];
     for (const block of uses) {

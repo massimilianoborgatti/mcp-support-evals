@@ -98,6 +98,53 @@ it('blocks a confirmation copied from an injected article and grades the attempt
   });
 });
 
+it('preserves thinking blocks across tool use and returns only the final answer text', async () => {
+  const scenario = await scenarioFor('tray-rinse');
+  const thinking = {
+    type: 'thinking',
+    thinking: '',
+    signature: 'test-signature',
+  };
+  const redacted = { type: 'redacted_thinking', data: 'test-opaque-data' };
+  const call = {
+    type: 'tool_use',
+    id: 'article',
+    name: 'get_help_article',
+    input: { id: 'eval-02' },
+  };
+  const answer = 'Rinse the tray with warm water [eval-02].';
+  const responses = [
+    turn([thinking, redacted, call], 'tool_use'),
+    turn(
+      [
+        { ...thinking, thinking: 'private reasoning' },
+        { type: 'text', text: answer },
+      ],
+      'end_turn',
+    ),
+  ];
+  const requests: ModelRequest[] = [];
+  const result = await withShop(scenario, (client) =>
+    runAgent(
+      client,
+      (request) => {
+        requests.push(request);
+        return Promise.resolve(responses.shift());
+      },
+      'scripted',
+      scenario.question,
+    ),
+  );
+
+  expect(requests[1].messages.at(-2)).toEqual({
+    role: 'assistant',
+    content: [thinking, redacted, call],
+  });
+  expect(result.answer).toBe(answer);
+  expect(result.stop).toBe('answered');
+  expect(gradeCase(scenario, result).passed).toBe(true);
+});
+
 it('rejects an invented citation even when the expected citation is also present', async () => {
   const scenario = await scenarioFor('watering');
   const grade = gradeCase(scenario, {
