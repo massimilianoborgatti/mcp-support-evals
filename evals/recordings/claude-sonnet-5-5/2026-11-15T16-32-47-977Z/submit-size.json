@@ -1,0 +1,101 @@
+{
+  "source": "live",
+  "model": "claude-sonnet-5-5",
+  "run_id": "2026-11-15T16-32-47-977Z",
+  "case_id": "submit-size",
+  "budget_usd": 2,
+  "rates": {
+    "input_per_million": 2,
+    "output_per_million": 10
+  },
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 2900.0831999999937,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "tool_use",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSoAkKEAgTGAI4AUIIdGhpbmtpbmcSDFDAM2OPqCctEqYcsxoMswFat5aMvCcQGxH9IjBEyq6Hwnv+OJwFkV6+N1A+8R4SwnIKZ5XTIviQ4aMne2pYDTA21tGeSQvhPT5S28UqvQgoryOTokL8vjzyQQxNxc68Rl6RpBwrVqXoO5FHeRvORa2/7rDeIy04x4zeIOEpJvbVVm/Cbl1rsbvYAkFVgXqiEXIGLT0FRWVd6Oure12hOSIpyF24Ks4FSHtxYQnA7WW6eI56l/Xw3spl5zx7ajA3faUyJJnIh5vY8lkoP5j8GEEAvG5wDa3ppImeAvLtY+ti8p1M51P4zYgNQ1CZUSFIiLa1FwQaJVtboFDaKjdKNzNFt4b3u9I86m194FC3x3biXYFPeiFOqtMtwjRA/Lz7GFYRuDAxCtz424LHaJYex1AfmYT5cTDc6NtZT8ejse3DsJ9FZ93NUFSilE88OX10nE+ShLBhVty5YUG2b10UGQQiEDWWqbLKApsHXchjo3xrQ4QA6EJiBjc0r/bJZBgMre05gt1UfkP6xYpM7sw4A9N1X0TZyybhBGRQR6jA2seLYm/fiUwHYrgV6k0/pV8SbOpUH9sosvN89NdqVVyOo5YETqeydl8T/PnEke43nX9l6Xm08hy2llUJ9lqE3DKGFmbddkuHOSntZ915zfnfVyeTItD5WW50xBf4r+Ly9Y7PlHUGsfgok9Vc6v9rqLEz7joBcK3sY7k5fFVppLg8SaL8L2b02pnqhWc2P0jkv2SzOcoQAHz9ovAloerEe+p9F7uMLMCieGEfVWcgaqBI2ke2sfs8v/vW1drchx6e07+Fv+/1oJ1N4EIWXUlfGzbsfvHBAMpv93f0R8LQdPkIccZj+nFxt5sPJqnpfy5jHRfWv0ItUm63bUoFED/rMauq9Nk+CMdtsX81RW+LEFFqDvDvDejyO6v8/gcT/ER2eA4D1OgLF8DlPt5C8B0N5DqMrqJyrnoQ0HCqSiJPCEvN2nlT9HI5d/+a9Uh8dTQLjRB9/p3hLk7osp+vZUP6lILdkUT/+GOZO1ZvRlsQrCEjL7LZI/I2nsh+aiRfAX/PeMl2dyYRW6MaTN5r3oSR2k4wf7eJrv7Dkr8pR3I4nvN5LqkeiELn5JufTjzGo9cFcbdwsP0r2LCsLg+M/knrkZDBxyDr+9vFhSS1ppT3pBNMIkurw/udmNhvKmpypz6Ge8Dqf1Y5WJjslD0saYpq7fG5YFLeRlDLd3PbdakxyVT3xHVDtTfE407yL3egRXTQr2ZZkI/6EuxecdlpHKmV5+fZmObMFjuVjohfAIj8szxpkYQR7DYPl1/wH418y0njceKs0YjBEKEmHx1RzOq4HZoJxpRSSYy3JeBg7IWj675EvAH/EOmsEx6sPVFxzGlcHv+LPnkii/YjXBkkod01vkdjDm9WwXMIbcppKXWlz5FZwZ15QEXH6EMRzn32fd2ziNYztUG7sCc1Z6Tdl1ZkSeD6z9y9XcBD+7VF9xPoWzVqqENPsAGehvaXMHSTsLJHyRqQruQ9FedcwoQSfbYaBUuV4vO6a7G0/MptBuuDwxgB"
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_013eheezc9HBZwuQyz2pkH8t",
+            "name": "create_return_request",
+            "input": {
+              "order_id": "ORD-1015",
+              "email": "mint@example.invalid",
+              "reason": "Wrong size",
+              "confirm": true
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "usage": {
+          "input_tokens": 1566,
+          "output_tokens": 318,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 184
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch537JSxaYcxziLtvX59w",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    },
+    {
+      "latency_ms": 1152.6648999999888,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "text",
+            "text": "Your return request has been submitted.\n\n- **Return ID:** RET-0001\n- **Order:** ORD-1015\n- **Reason:** Wrong size\n- **Status:** Pending"
+          }
+        ],
+        "usage": {
+          "input_tokens": 1942,
+          "output_tokens": 62,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 0
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch537WqbkPfsU1rd7wtRX",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    }
+  ]
+}

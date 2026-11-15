@@ -128,8 +128,8 @@ const selection = selectionSchema.parse(
 );
 const runs = [];
 for (const [label, file] of [
-  ['Baseline', selection.baseline],
-  ['Follow-up', selection.follow_up],
+  ['Run A (original prompt)', selection.baseline],
+  ['Run B (updated prompt)', selection.follow_up],
 ] as const) {
   if (!file) continue;
   const data = resultSchema.parse(

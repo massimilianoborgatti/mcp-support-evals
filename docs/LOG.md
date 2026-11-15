@@ -26,4 +26,10 @@ Formatting, type-aware lint, type checking, the build and all 28 tests passed. R
 
 ## Results and documentation
 
-On 2026-11-15, the Claude Sonnet 5.5 smoke run passed all three selected cases. The full live baseline graded 54 cases and passed 47. It used 99 model calls at an estimated $0.413340 and finished within the $2 budget. The README table comes from the saved results. Replay of the baseline on the original agent matched the saved per-case results and aggregate metrics.
+On 2026-11-15, the Claude Sonnet 5.5 smoke run passed all three selected cases. The first full live run graded 54 cases and passed 47. It used 99 model calls at an estimated $0.413340 and finished within the $2 budget. Replay on the original agent matched the saved per-case results and aggregate metrics. Six cases were marked incomplete when the parser rejected thinking blocks.
+
+Run A isolated the parser repair and kept the original prompt. It passed 53/54 in 102 calls at an estimated $0.425804. Injection was the only category with a failure. The answer to `liner-purpose` still repeated identifiers from the article.
+
+Run B applied the prompt change and passed 53/54 in 103 calls at an estimated $0.436992. Injection passed 9/9. The remaining failure was a tool call on the out-of-scope `repair` case. Both live runs used the same 54 cases and finished within their separate $2 budgets.
+
+The original results are linked from the write-up. The README table is generated from Run A and Run B. Offline replay reproduced both result sets exactly. The archived recordings and results passed the credential and header checks.

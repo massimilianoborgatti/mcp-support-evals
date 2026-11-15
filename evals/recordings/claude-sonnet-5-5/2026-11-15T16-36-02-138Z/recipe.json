@@ -1,0 +1,55 @@
+{
+  "source": "live",
+  "model": "claude-sonnet-5-5",
+  "run_id": "2026-11-15T16-36-02-138Z",
+  "case_id": "recipe",
+  "budget_usd": 2,
+  "rates": {
+    "input_per_million": 2,
+    "output_per_million": 10
+  },
+  "state": "complete",
+  "turns": [
+    {
+      "latency_ms": 2201.2353000000003,
+      "response": {
+        "model": "claude-sonnet-5-5",
+        "stop_reason": "end_turn",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "CAQSzgUKEAgTGAI4AUIIdGhpbmtpbmcSDCRHXX9RlboDQ9sbbxoMw/242BMRmunuL3byIjCYAIDkN3RbUGkASwsoR+OqP9gWDRqWqfK4iqyMYY+NNCsT092IRYTULlJRMLkyobwq6wSrNo3JTKsWPkRw5X7cNn4bRehUPjTkH/ia/NfkoznTIYriPV+izXEwCeJPomPqE4M2XjrFmM0caUmJk3WQvprFE1zGSW1R38IWcLafkyqrAZyGgxUrv9yLoI/uXPqFbMPVGPk2PN7KwsRYoVh6f4Tl6/DZH/FAnjs3C7VKPgZDVwQ1Sas58Hi4Lm27bSMb86rLlHJ1msKYzCV3XMAMhUjJPcCqRA3QhVSOO3JDStJR2fM9faLRB6WlrzZHj1McZaZIxAfABr7yZjjBb6phSwj3G33EAtbY42Wup19fgl17QDHjyrI4TvKWHtxAfFR5weZJR3hrJny/CLKB+jfqZVBn2PQYFq2qupbwS2Im1y6JX5xhvsIli1kms4xRQCbUQsFsG54N8tQ2vP1AEvF2hLLZjt5iS2EHsW9q6WjmaGgCJ/RM73Qd61RE6p6pHP+GBv6T92OUhccgE3Z3qEHc4iaUKAXycxSJwdsT2ggZzCaACSyhPJYm7bZ/2bTKu40t2o0AGMXepgK9Rcy+1HtRKZVsF97UCatk4l7b6e6AMFg17pEMZG3tnjzrKy00w90hP86pRbW01HiOaQFfglwf8p296/LJhyKOt07e3w7n+LpGHHfv074+vujHgU/8pmFmjeXv06zEaPlyq2LOlK34uVcOx3bjxJDr/soK+L7zNaFankgUpzpeZPItb+YLVyiCZxAumMJK376qCFBteq38qqPQ1cHFgiqxmKflakleDv5qDsMvICzn306M8aRrATRkzLBhzfZyAV4HxSP4Vej/ttFDqcoK4WoV52A/5vc5pEzAfzQstYcy1+S8d8atGAE="
+          },
+          {
+            "type": "text",
+            "text": "I'm sorry, but I can't help with cooking questions like mushroom risotto. I can only help with Demo Plant Shop topics: plant care, plant recommendations, order status, and returns. If you have a plant question, I'm happy to help."
+          }
+        ],
+        "usage": {
+          "input_tokens": 1586,
+          "output_tokens": 123,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 0
+          },
+          "output_tokens_details": {
+            "thinking_tokens": 43
+          },
+          "service_tier": "standard",
+          "inference_geo": "global",
+          "speed": "standard"
+        },
+        "id": "msg_011Ch53SoUF1vef9xNxA3F4N",
+        "type": "message",
+        "role": "assistant",
+        "container": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "diagnostics": null
+      }
+    }
+  ]
+}

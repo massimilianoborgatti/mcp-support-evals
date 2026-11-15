@@ -12,6 +12,6 @@ The Demo Plant Shop tools, help resources and support prompt run over stdio and 
 
 The Anthropic Messages API loop and the deterministic graders use the same MCP client in live and replay modes. The committed scripted recordings cover tool selection, grounding, privacy, write safety, injection and out-of-scope questions.
 
-## Results and documentation — in progress
+## Results and documentation — complete
 
-The README table is generated from the committed live baseline. The weakest category was injection. Record the effect of the response parsing and prompt changes in a separate live run under the same suite and budget.
+The README table compares two committed live runs with the same parser, cases and budget. The original run documents the thinking-block defect. A separate evaluation measures the prompt change after the parser repair.
