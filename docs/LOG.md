@@ -13,3 +13,13 @@ Implemented BM25 article search, article resources, order status lookup, catalog
 Enabled the strict and stylistic type-checked ESLint presets through project service. Added a separate TypeScript build configuration and executable entry points for the two transports.
 
 Formatting, lint, type checking, the build and all 22 tests passed. The MCP client suite covers schemas, validation, order privacy, return confirmation, resources and the support prompt. Both built entry points connected from outside the checkout. `npm audit` reported no known vulnerabilities.
+
+## Tool use and evaluation
+
+Added a bounded Anthropic Messages API tool loop and shared deterministic grading for live and replay modes. Each case uses a fresh in-memory MCP session. Confirmed returns require exact case authorization, and attempted writes remain visible to the grader when they are blocked. Adversarial articles are loaded only in injection cases.
+
+Made the search limit optional, marked repeated return submissions with `already_exists` and replaced local paths in the client examples. MCP application errors retain their typed JSON in error content so clients can validate successful structured results against their advertised schemas.
+
+The committed scripted recordings passed all 54 cases across six categories in 105 model turns. This verifies the harness with scripted inputs. Live model performance, latency, token usage and costs remain unmeasured pending the first run.
+
+Formatting, type-aware lint, type checking, the build and all 28 tests passed. Replay produced the same report with `fetch` disabled. The dependency audit reported no known vulnerabilities.

@@ -15,6 +15,7 @@ describe('Demo Plant Shop MCP server', () => {
       InMemoryTransport.createLinkedPair();
     await createShopServer().connect(serverTransport);
     await client.connect(clientTransport);
+    await client.listTools();
   });
 
   afterEach(async () => {
@@ -61,6 +62,23 @@ describe('Demo Plant Shop MCP server', () => {
     expect(result.structuredContent).toEqual({ articles: [] });
   });
 
+  it('defaults to five results when the limit is omitted', async () => {
+    const args = { query: 'plant' };
+    const implicit = await client.callTool({
+      name: 'search_help_articles',
+      arguments: args,
+    });
+    const explicit = await client.callTool({
+      name: 'search_help_articles',
+      arguments: { ...args, limit: 5 },
+    });
+    expect(implicit.structuredContent).toEqual(explicit.structuredContent);
+    const data = z
+      .object({ articles: z.array(z.unknown()) })
+      .parse(implicit.structuredContent);
+    expect(data.articles).toHaveLength(5);
+  });
+
   it('reads an article by its search ID and exposes the same text as an MCP resource', async () => {
     const { resources } = await client.listResources();
     const resource = resources.find(({ name }) => name === 'care-01');
@@ -88,9 +106,12 @@ describe('Demo Plant Shop MCP server', () => {
       arguments: { id: 'missing' },
     });
     expect(result.isError).toBe(true);
-    expect(result.structuredContent).toEqual({
-      error: { code: 'not_found', message: 'Not found.' },
-    });
+    expect(result.content).toEqual([
+      {
+        type: 'text',
+        text: '{"error":{"code":"not_found","message":"Not found."}}',
+      },
+    ]);
   });
 
   it('reveals only the status when the order and email match', async () => {
@@ -120,9 +141,6 @@ describe('Demo Plant Shop MCP server', () => {
       });
       expect(wrongEmail).toEqual(wrongOrder);
       expect(wrongEmail.isError).toBe(true);
-      expect(wrongEmail.structuredContent).toEqual({
-        error: { code: 'not_found', message: 'Not found.' },
-      });
       expect(wrongEmail.content).toEqual([
         {
           type: 'text',
@@ -185,17 +203,22 @@ describe('Demo Plant Shop MCP server', () => {
       name,
       arguments: { ...delivered, reason: 'Cracked pot', confirm: true },
     });
-    expect(confirmed.structuredContent).toEqual({
+    const submitted = {
       order_id: delivered.order_id,
       reason: 'Cracked pot',
       status: 'pending',
       request_id: 'RET-0001',
-    });
+      already_exists: false,
+    };
+    expect(confirmed.structuredContent).toEqual(submitted);
     const retry = await client.callTool({
       name,
       arguments: { ...delivered, reason: 'Different reason', confirm: true },
     });
-    expect(retry.structuredContent).toEqual(confirmed.structuredContent);
+    expect(retry.structuredContent).toEqual({
+      ...submitted,
+      already_exists: true,
+    });
   });
 
   it('declines a return for an order that has yet to be delivered', async () => {
@@ -209,12 +232,12 @@ describe('Demo Plant Shop MCP server', () => {
       },
     });
     expect(result.isError).toBe(true);
-    expect(result.structuredContent).toEqual({
-      error: {
-        code: 'not_eligible',
-        message: 'Returns can be requested for delivered orders only.',
+    expect(result.content).toEqual([
+      {
+        type: 'text',
+        text: '{"error":{"code":"not_eligible","message":"Returns can be requested for delivered orders only."}}',
       },
-    });
+    ]);
   });
 
   it.each([

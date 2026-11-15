@@ -9,9 +9,12 @@ export function createReturnStore() {
   const requests = new Map<string, ReturnRequest>();
 
   return {
-    create(orderId: string, reason: string): ReturnRequest {
+    create(
+      orderId: string,
+      reason: string,
+    ): ReturnRequest & { already_exists: boolean } {
       const existing = requests.get(orderId);
-      if (existing) return existing;
+      if (existing) return { ...existing, already_exists: true };
 
       const request: ReturnRequest = {
         request_id: `RET-${String(requests.size + 1).padStart(4, '0')}`,
@@ -20,7 +23,7 @@ export function createReturnStore() {
         status: 'pending',
       };
       requests.set(orderId, request);
-      return request;
+      return { ...request, already_exists: false };
     },
   };
 }
