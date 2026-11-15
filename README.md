@@ -130,6 +130,8 @@ Replay the latest recorded run for a model with `npm run eval:replay -- --model 
 
 The cases use a small fictional dataset and measure a single model. The graders check tool arguments, citation IDs and answer patterns. They do not assess overall helpfulness or verify every factual clause.
 
+Each prompt ran once, with nine cases per category, so a one-case difference is within normal run-to-run variation. Run B passed `liner-purpose` and missed `repair`. Both runs scored 53/54 overall, so the comparison leaves any overall improvement from the prompt change unproven.
+
 ## Checks
 
 ```sh
